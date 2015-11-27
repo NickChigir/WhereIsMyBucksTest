@@ -16,6 +16,18 @@
 		37AB93EA1C03CEB100BFB2E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37AB93E91C03CEB100BFB2E9 /* Assets.xcassets */; };
 		37AB93ED1C03CEB100BFB2E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AB93EB1C03CEB100BFB2E9 /* LaunchScreen.storyboard */; };
 		37AB93F81C03CEB100BFB2E9 /* WhereIsMyBucksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AB93F71C03CEB100BFB2E9 /* WhereIsMyBucksTests.m */; };
+		37AE15DE1C08796E0039F04E /* Transaction+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE15C71C08796D0039F04E /* Transaction+CoreDataProperties.m */; };
+		37AE15DF1C08796E0039F04E /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE15C91C08796D0039F04E /* Transaction.m */; };
+		37AE15E01C08796E0039F04E /* Account+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE15CB1C08796D0039F04E /* Account+CoreDataProperties.m */; };
+		37AE15E11C08796E0039F04E /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE15CD1C08796D0039F04E /* Account.m */; };
+		37AE15E21C08796E0039F04E /* Event+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE15CF1C08796D0039F04E /* Event+CoreDataProperties.m */; };
+		37AE15E31C08796E0039F04E /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE15D11C08796D0039F04E /* Event.m */; };
+		37AE15E41C08796E0039F04E /* Cathegory+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE15D31C08796D0039F04E /* Cathegory+CoreDataProperties.m */; };
+		37AE15E51C08796E0039F04E /* Cathegory.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE15D51C08796D0039F04E /* Cathegory.m */; };
+		37AE15E61C08796E0039F04E /* Balance+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE15D71C08796D0039F04E /* Balance+CoreDataProperties.m */; };
+		37AE15E71C08796E0039F04E /* Balance.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE15D91C08796D0039F04E /* Balance.m */; };
+		37AE15E81C08796E0039F04E /* CashFlow+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE15DB1C08796D0039F04E /* CashFlow+CoreDataProperties.m */; };
+		37AE15E91C08796E0039F04E /* CashFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE15DD1C08796D0039F04E /* CashFlow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +57,30 @@
 		37AB93F31C03CEB100BFB2E9 /* WhereIsMyBucksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhereIsMyBucksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37AB93F71C03CEB100BFB2E9 /* WhereIsMyBucksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereIsMyBucksTests.m; sourceTree = "<group>"; };
 		37AB93F91C03CEB100BFB2E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37AE15C61C08796C0039F04E /* Transaction+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Transaction+CoreDataProperties.h"; path = "WhereIsMyBucks/Transaction+CoreDataProperties.h"; sourceTree = "<group>"; };
+		37AE15C71C08796D0039F04E /* Transaction+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Transaction+CoreDataProperties.m"; path = "WhereIsMyBucks/Transaction+CoreDataProperties.m"; sourceTree = "<group>"; };
+		37AE15C81C08796D0039F04E /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Transaction.h; path = WhereIsMyBucks/Transaction.h; sourceTree = "<group>"; };
+		37AE15C91C08796D0039F04E /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Transaction.m; path = WhereIsMyBucks/Transaction.m; sourceTree = "<group>"; };
+		37AE15CA1C08796D0039F04E /* Account+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Account+CoreDataProperties.h"; path = "WhereIsMyBucks/Account+CoreDataProperties.h"; sourceTree = "<group>"; };
+		37AE15CB1C08796D0039F04E /* Account+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Account+CoreDataProperties.m"; path = "WhereIsMyBucks/Account+CoreDataProperties.m"; sourceTree = "<group>"; };
+		37AE15CC1C08796D0039F04E /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Account.h; path = WhereIsMyBucks/Account.h; sourceTree = "<group>"; };
+		37AE15CD1C08796D0039F04E /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Account.m; path = WhereIsMyBucks/Account.m; sourceTree = "<group>"; };
+		37AE15CE1C08796D0039F04E /* Event+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Event+CoreDataProperties.h"; path = "WhereIsMyBucks/Event+CoreDataProperties.h"; sourceTree = "<group>"; };
+		37AE15CF1C08796D0039F04E /* Event+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Event+CoreDataProperties.m"; path = "WhereIsMyBucks/Event+CoreDataProperties.m"; sourceTree = "<group>"; };
+		37AE15D01C08796D0039F04E /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = WhereIsMyBucks/Event.h; sourceTree = "<group>"; };
+		37AE15D11C08796D0039F04E /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = WhereIsMyBucks/Event.m; sourceTree = "<group>"; };
+		37AE15D21C08796D0039F04E /* Cathegory+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Cathegory+CoreDataProperties.h"; path = "WhereIsMyBucks/Cathegory+CoreDataProperties.h"; sourceTree = "<group>"; };
+		37AE15D31C08796D0039F04E /* Cathegory+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Cathegory+CoreDataProperties.m"; path = "WhereIsMyBucks/Cathegory+CoreDataProperties.m"; sourceTree = "<group>"; };
+		37AE15D41C08796D0039F04E /* Cathegory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cathegory.h; path = WhereIsMyBucks/Cathegory.h; sourceTree = "<group>"; };
+		37AE15D51C08796D0039F04E /* Cathegory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cathegory.m; path = WhereIsMyBucks/Cathegory.m; sourceTree = "<group>"; };
+		37AE15D61C08796D0039F04E /* Balance+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Balance+CoreDataProperties.h"; path = "WhereIsMyBucks/Balance+CoreDataProperties.h"; sourceTree = "<group>"; };
+		37AE15D71C08796D0039F04E /* Balance+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Balance+CoreDataProperties.m"; path = "WhereIsMyBucks/Balance+CoreDataProperties.m"; sourceTree = "<group>"; };
+		37AE15D81C08796D0039F04E /* Balance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Balance.h; path = WhereIsMyBucks/Balance.h; sourceTree = "<group>"; };
+		37AE15D91C08796D0039F04E /* Balance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Balance.m; path = WhereIsMyBucks/Balance.m; sourceTree = "<group>"; };
+		37AE15DA1C08796D0039F04E /* CashFlow+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CashFlow+CoreDataProperties.h"; path = "WhereIsMyBucks/CashFlow+CoreDataProperties.h"; sourceTree = "<group>"; };
+		37AE15DB1C08796D0039F04E /* CashFlow+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CashFlow+CoreDataProperties.m"; path = "WhereIsMyBucks/CashFlow+CoreDataProperties.m"; sourceTree = "<group>"; };
+		37AE15DC1C08796D0039F04E /* CashFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CashFlow.h; path = WhereIsMyBucks/CashFlow.h; sourceTree = "<group>"; };
+		37AE15DD1C08796D0039F04E /* CashFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CashFlow.m; path = WhereIsMyBucks/CashFlow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +104,30 @@
 		37AB93CB1C03CEAE00BFB2E9 = {
 			isa = PBXGroup;
 			children = (
+				37AE15C61C08796C0039F04E /* Transaction+CoreDataProperties.h */,
+				37AE15C71C08796D0039F04E /* Transaction+CoreDataProperties.m */,
+				37AE15C81C08796D0039F04E /* Transaction.h */,
+				37AE15C91C08796D0039F04E /* Transaction.m */,
+				37AE15CA1C08796D0039F04E /* Account+CoreDataProperties.h */,
+				37AE15CB1C08796D0039F04E /* Account+CoreDataProperties.m */,
+				37AE15CC1C08796D0039F04E /* Account.h */,
+				37AE15CD1C08796D0039F04E /* Account.m */,
+				37AE15CE1C08796D0039F04E /* Event+CoreDataProperties.h */,
+				37AE15CF1C08796D0039F04E /* Event+CoreDataProperties.m */,
+				37AE15D01C08796D0039F04E /* Event.h */,
+				37AE15D11C08796D0039F04E /* Event.m */,
+				37AE15D21C08796D0039F04E /* Cathegory+CoreDataProperties.h */,
+				37AE15D31C08796D0039F04E /* Cathegory+CoreDataProperties.m */,
+				37AE15D41C08796D0039F04E /* Cathegory.h */,
+				37AE15D51C08796D0039F04E /* Cathegory.m */,
+				37AE15D61C08796D0039F04E /* Balance+CoreDataProperties.h */,
+				37AE15D71C08796D0039F04E /* Balance+CoreDataProperties.m */,
+				37AE15D81C08796D0039F04E /* Balance.h */,
+				37AE15D91C08796D0039F04E /* Balance.m */,
+				37AE15DA1C08796D0039F04E /* CashFlow+CoreDataProperties.h */,
+				37AE15DB1C08796D0039F04E /* CashFlow+CoreDataProperties.m */,
+				37AE15DC1C08796D0039F04E /* CashFlow.h */,
+				37AE15DD1C08796D0039F04E /* CashFlow.m */,
 				37AB93D61C03CEAF00BFB2E9 /* WhereIsMyBucks */,
 				37AB93F61C03CEB100BFB2E9 /* WhereIsMyBucksTests */,
 				37AB93D51C03CEAF00BFB2E9 /* Products */,
@@ -219,11 +279,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37AE15E31C08796E0039F04E /* Event.m in Sources */,
+				37AE15E11C08796E0039F04E /* Account.m in Sources */,
+				37AE15E61C08796E0039F04E /* Balance+CoreDataProperties.m in Sources */,
+				37AE15DF1C08796E0039F04E /* Transaction.m in Sources */,
 				37AB93E51C03CEB000BFB2E9 /* DetailViewController.m in Sources */,
 				37AB93E21C03CEB000BFB2E9 /* MasterViewController.m in Sources */,
+				37AE15E21C08796E0039F04E /* Event+CoreDataProperties.m in Sources */,
 				37AB93DC1C03CEAF00BFB2E9 /* AppDelegate.m in Sources */,
+				37AE15E51C08796E0039F04E /* Cathegory.m in Sources */,
 				37AB93D91C03CEAF00BFB2E9 /* main.m in Sources */,
+				37AE15E81C08796E0039F04E /* CashFlow+CoreDataProperties.m in Sources */,
+				37AE15E71C08796E0039F04E /* Balance.m in Sources */,
+				37AE15DE1C08796E0039F04E /* Transaction+CoreDataProperties.m in Sources */,
 				37AB93DF1C03CEB000BFB2E9 /* WhereIsMyBucks.xcdatamodeld in Sources */,
+				37AE15E91C08796E0039F04E /* CashFlow.m in Sources */,
+				37AE15E41C08796E0039F04E /* Cathegory+CoreDataProperties.m in Sources */,
+				37AE15E01C08796E0039F04E /* Account+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +482,7 @@
 				37AB93FE1C03CEB200BFB2E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37AB93FF1C03CEB200BFB2E9 /* Build configuration list for PBXNativeTarget "WhereIsMyBucksTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +491,7 @@
 				37AB94011C03CEB200BFB2E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -1,9 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Event">
-        <attribute name="timeStamp" optional="YES" attributeType="Date"/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
+    <entity name="Account" representedClassName="Account" syncable="YES">
+        <attribute name="accountDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Balance" representedClassName="Balance" syncable="YES">
+        <attribute name="accountId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="currenctAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="positionDate" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="CashFlow" representedClassName="CashFlow" syncable="YES">
+        <attribute name="accountId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cathegoryId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="tranId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="linkToCathegory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cathegory" syncable="YES"/>
+        <relationship name="linkToTransaction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Transaction" syncable="YES"/>
+    </entity>
+    <entity name="Cathegory" representedClassName="Cathegory" syncable="YES">
+        <attribute name="cathegoryDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cathegoryName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Event" representedClassName="Event">
+        <attribute name="timeStamp" optional="YES" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <userInfo/>
+    </entity>
+    <entity name="Transaction" representedClassName="Transaction" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="tranAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="tranDate" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
+        <element name="Event" positionX="-380" positionY="102" width="128" height="60"/>
+        <element name="Account" positionX="153" positionY="45" width="128" height="103"/>
+        <element name="Balance" positionX="331" positionY="45" width="128" height="105"/>
+        <element name="CashFlow" positionX="-45" positionY="342" width="128" height="148"/>
+        <element name="Cathegory" positionX="268" positionY="369" width="128" height="90"/>
+        <element name="Transaction" positionX="63" positionY="171" width="128" height="90"/>
     </elements>
 </model>
