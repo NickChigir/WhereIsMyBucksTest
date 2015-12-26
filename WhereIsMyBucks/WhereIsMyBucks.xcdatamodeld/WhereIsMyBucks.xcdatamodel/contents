@@ -18,13 +18,14 @@
         <attribute name="cathegoryId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="tranId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <relationship name="linkToCathegory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cathegory" syncable="YES"/>
-        <relationship name="linkToTransaction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Transaction" syncable="YES"/>
+        <relationship name="linkToCathegory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cathegory" inverseName="toCashFlow" inverseEntity="Cathegory" syncable="YES"/>
+        <relationship name="linkToTransaction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Transaction" inverseName="toCashFlow" inverseEntity="Transaction" syncable="YES"/>
     </entity>
     <entity name="Cathegory" representedClassName="Cathegory" syncable="YES">
         <attribute name="cathegoryDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cathegoryName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="toCashFlow" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="CashFlow" inverseName="linkToCathegory" inverseEntity="CashFlow" syncable="YES"/>
     </entity>
     <entity name="Event" representedClassName="Event">
         <attribute name="timeStamp" optional="YES" attributeType="Date">
@@ -36,13 +37,14 @@
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="tranAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="tranDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="toCashFlow" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="CashFlow" inverseName="linkToTransaction" inverseEntity="CashFlow" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="-380" positionY="102" width="128" height="60"/>
         <element name="Account" positionX="153" positionY="45" width="128" height="103"/>
         <element name="Balance" positionX="331" positionY="45" width="128" height="105"/>
         <element name="CashFlow" positionX="-45" positionY="342" width="128" height="148"/>
-        <element name="Cathegory" positionX="268" positionY="369" width="128" height="90"/>
-        <element name="Transaction" positionX="63" positionY="171" width="128" height="90"/>
+        <element name="Cathegory" positionX="268" positionY="369" width="128" height="103"/>
+        <element name="Event" positionX="-380" positionY="102" width="128" height="60"/>
+        <element name="Transaction" positionX="63" positionY="171" width="128" height="103"/>
     </elements>
 </model>

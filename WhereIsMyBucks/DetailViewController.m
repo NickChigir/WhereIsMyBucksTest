@@ -28,8 +28,17 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
-    }
+        
+        NSDateFormatter *dateFormat = [NSDateFormatter new];
+        [dateFormat setDateFormat:@"MMM dd yyyy"];
+        
+        NSString *tranDate = [dateFormat stringFromDate:[[NSDate alloc] initWithTimeIntervalSince1970:self.detailItem.tranDate]];
+        
+       
+
+        self.detailNavigation.title =[NSString stringWithFormat:@"Transaction details: %@ , %@", tranDate, self.detailItem.tranAmount];
+        
+           }
 }
 
 - (void)viewDidLoad {

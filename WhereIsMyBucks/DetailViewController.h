@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Transaction.h"
 @interface DetailViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (strong, nonatomic) Transaction *detailItem;
+
+@property (weak, nonatomic) IBOutlet UINavigationItem *detailNavigation;
 
 @end
 

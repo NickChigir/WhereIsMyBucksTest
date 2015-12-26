@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "Transaction.h"
 
 @interface MasterViewController ()
 
@@ -21,7 +22,12 @@
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    
+    UIBarButtonItem *manageButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(manageCathegories:)];
+    self.navigationItem.rightBarButtonItems = @[addButton,manageButton];
+    
+    
+    
     //self.navigationItem.
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
@@ -37,7 +43,8 @@
 }
 
 - (void)insertNewObject:(id)sender {
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    [self performSegueWithIdentifier:@"addTran" sender:self];
+  /*  NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
         
@@ -53,14 +60,18 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+   */
 }
 
+- (void) manageCathegories: (id) sender {
+    [self performSegueWithIdentifier:@"Cathegory" sender:self];
+}
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        Transaction *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
         [controller setDetailItem:object];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
@@ -106,9 +117,15 @@
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    Transaction *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    NSDateFormatter *dateFormat = [NSDateFormatter new];
+    [dateFormat setDateFormat:@"MMM dd yyyy"];
+     
+    cell.textLabel.text = [dateFormat stringFromDate:[[NSDate alloc] initWithTimeIntervalSince1970:object.tranDate]];
+    UILabel *amount = [cell viewWithTag:1];
+    amount.text =object.tranAmount.description;
 }
+
 
 #pragma mark - Fetched results controller
 
@@ -120,14 +137,14 @@
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Transaction" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"tranDate" ascending:NO];
 
     [fetchRequest setSortDescriptors:@[sortDescriptor]];
     

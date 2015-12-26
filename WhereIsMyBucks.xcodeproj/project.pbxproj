@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		377E746E1C2965FB003C4C38 /* CathegoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 377E746D1C2965FB003C4C38 /* CathegoryViewController.m */; };
 		37AB93D91C03CEAF00BFB2E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AB93D81C03CEAF00BFB2E9 /* main.m */; };
 		37AB93DC1C03CEAF00BFB2E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AB93DB1C03CEAF00BFB2E9 /* AppDelegate.m */; };
 		37AB93DF1C03CEB000BFB2E9 /* WhereIsMyBucks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37AB93DD1C03CEB000BFB2E9 /* WhereIsMyBucks.xcdatamodeld */; };
@@ -28,6 +29,8 @@
 		37AE15E71C08796E0039F04E /* Balance.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE15D91C08796D0039F04E /* Balance.m */; };
 		37AE15E81C08796E0039F04E /* CashFlow+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE15DB1C08796D0039F04E /* CashFlow+CoreDataProperties.m */; };
 		37AE15E91C08796E0039F04E /* CashFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE15DD1C08796D0039F04E /* CashFlow.m */; };
+		37AE15EC1C08A6810039F04E /* NewTranViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE15EB1C08A6810039F04E /* NewTranViewController.m */; };
+		37AE15EF1C08BB9F0039F04E /* KeysGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE15EE1C08BB9F0039F04E /* KeysGenerator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		377E746C1C2965FB003C4C38 /* CathegoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CathegoryViewController.h; sourceTree = "<group>"; };
+		377E746D1C2965FB003C4C38 /* CathegoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CathegoryViewController.m; sourceTree = "<group>"; };
 		37AB93D41C03CEAF00BFB2E9 /* WhereIsMyBucks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereIsMyBucks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37AB93D81C03CEAF00BFB2E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37AB93DA1C03CEAF00BFB2E9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,6 +86,10 @@
 		37AE15DB1C08796D0039F04E /* CashFlow+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CashFlow+CoreDataProperties.m"; path = "WhereIsMyBucks/CashFlow+CoreDataProperties.m"; sourceTree = "<group>"; };
 		37AE15DC1C08796D0039F04E /* CashFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CashFlow.h; path = WhereIsMyBucks/CashFlow.h; sourceTree = "<group>"; };
 		37AE15DD1C08796D0039F04E /* CashFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CashFlow.m; path = WhereIsMyBucks/CashFlow.m; sourceTree = "<group>"; };
+		37AE15EA1C08A6810039F04E /* NewTranViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTranViewController.h; sourceTree = "<group>"; };
+		37AE15EB1C08A6810039F04E /* NewTranViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTranViewController.m; sourceTree = "<group>"; };
+		37AE15ED1C08BB9F0039F04E /* KeysGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeysGenerator.h; sourceTree = "<group>"; };
+		37AE15EE1C08BB9F0039F04E /* KeysGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeysGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +167,12 @@
 				37AB93EE1C03CEB100BFB2E9 /* Info.plist */,
 				37AB93DD1C03CEB000BFB2E9 /* WhereIsMyBucks.xcdatamodeld */,
 				37AB93D71C03CEAF00BFB2E9 /* Supporting Files */,
+				37AE15EA1C08A6810039F04E /* NewTranViewController.h */,
+				37AE15EB1C08A6810039F04E /* NewTranViewController.m */,
+				37AE15ED1C08BB9F0039F04E /* KeysGenerator.h */,
+				37AE15EE1C08BB9F0039F04E /* KeysGenerator.m */,
+				377E746C1C2965FB003C4C38 /* CathegoryViewController.h */,
+				377E746D1C2965FB003C4C38 /* CathegoryViewController.m */,
 			);
 			path = WhereIsMyBucks;
 			sourceTree = "<group>";
@@ -280,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37AE15E31C08796E0039F04E /* Event.m in Sources */,
+				377E746E1C2965FB003C4C38 /* CathegoryViewController.m in Sources */,
 				37AE15E11C08796E0039F04E /* Account.m in Sources */,
 				37AE15E61C08796E0039F04E /* Balance+CoreDataProperties.m in Sources */,
 				37AE15DF1C08796E0039F04E /* Transaction.m in Sources */,
@@ -287,9 +303,11 @@
 				37AB93E21C03CEB000BFB2E9 /* MasterViewController.m in Sources */,
 				37AE15E21C08796E0039F04E /* Event+CoreDataProperties.m in Sources */,
 				37AB93DC1C03CEAF00BFB2E9 /* AppDelegate.m in Sources */,
+				37AE15EC1C08A6810039F04E /* NewTranViewController.m in Sources */,
 				37AE15E51C08796E0039F04E /* Cathegory.m in Sources */,
 				37AB93D91C03CEAF00BFB2E9 /* main.m in Sources */,
 				37AE15E81C08796E0039F04E /* CashFlow+CoreDataProperties.m in Sources */,
+				37AE15EF1C08BB9F0039F04E /* KeysGenerator.m in Sources */,
 				37AE15E71C08796E0039F04E /* Balance.m in Sources */,
 				37AE15DE1C08796E0039F04E /* Transaction+CoreDataProperties.m in Sources */,
 				37AB93DF1C03CEB000BFB2E9 /* WhereIsMyBucks.xcdatamodeld in Sources */,
