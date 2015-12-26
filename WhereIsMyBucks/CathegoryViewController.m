@@ -207,6 +207,7 @@
     
     [self.managedObjectContext deleteObject:objToDelete];
     [self.fetchResult removeObjectAtIndex:row];
+    
 }
 
 /*
