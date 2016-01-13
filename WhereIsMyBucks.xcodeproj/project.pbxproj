@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3707AE561C4543C500C388E8 /* HBTransactionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3707AE551C4543C500C388E8 /* HBTransactionController.m */; };
 		377E746E1C2965FB003C4C38 /* CathegoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 377E746D1C2965FB003C4C38 /* CathegoryViewController.m */; };
 		37AB93D91C03CEAF00BFB2E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AB93D81C03CEAF00BFB2E9 /* main.m */; };
 		37AB93DC1C03CEAF00BFB2E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AB93DB1C03CEAF00BFB2E9 /* AppDelegate.m */; };
@@ -31,6 +32,10 @@
 		37AE15E91C08796E0039F04E /* CashFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE15DD1C08796D0039F04E /* CashFlow.m */; };
 		37AE15EC1C08A6810039F04E /* NewTranViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE15EB1C08A6810039F04E /* NewTranViewController.m */; };
 		37AE15EF1C08BB9F0039F04E /* KeysGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE15EE1C08BB9F0039F04E /* KeysGenerator.m */; };
+		37FF887B1C3B358900F1B100 /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FF887A1C3B358900F1B100 /* ScrollViewController.m */; };
+		37FF887E1C3B3AF100F1B100 /* TranDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FF887D1C3B3AF100F1B100 /* TranDetailViewController.m */; };
+		37FF88811C3B3C7100F1B100 /* DetailListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FF88801C3B3C7100F1B100 /* DetailListViewController.m */; };
+		37FF88841C3B3E2000F1B100 /* CatergoryPickerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FF88831C3B3E2000F1B100 /* CatergoryPickerDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3707AE541C4543C500C388E8 /* HBTransactionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBTransactionController.h; sourceTree = "<group>"; };
+		3707AE551C4543C500C388E8 /* HBTransactionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBTransactionController.m; sourceTree = "<group>"; };
 		377E746C1C2965FB003C4C38 /* CathegoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CathegoryViewController.h; sourceTree = "<group>"; };
 		377E746D1C2965FB003C4C38 /* CathegoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CathegoryViewController.m; sourceTree = "<group>"; };
 		37AB93D41C03CEAF00BFB2E9 /* WhereIsMyBucks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereIsMyBucks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +97,14 @@
 		37AE15EB1C08A6810039F04E /* NewTranViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTranViewController.m; sourceTree = "<group>"; };
 		37AE15ED1C08BB9F0039F04E /* KeysGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeysGenerator.h; sourceTree = "<group>"; };
 		37AE15EE1C08BB9F0039F04E /* KeysGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeysGenerator.m; sourceTree = "<group>"; };
+		37FF88791C3B358900F1B100 /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
+		37FF887A1C3B358900F1B100 /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
+		37FF887C1C3B3AF100F1B100 /* TranDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranDetailViewController.h; sourceTree = "<group>"; };
+		37FF887D1C3B3AF100F1B100 /* TranDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranDetailViewController.m; sourceTree = "<group>"; };
+		37FF887F1C3B3C7100F1B100 /* DetailListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailListViewController.h; sourceTree = "<group>"; };
+		37FF88801C3B3C7100F1B100 /* DetailListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailListViewController.m; sourceTree = "<group>"; };
+		37FF88821C3B3E2000F1B100 /* CategoryPickerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryPickerDataSource.h; sourceTree = "<group>"; };
+		37FF88831C3B3E2000F1B100 /* CatergoryPickerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatergoryPickerDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +188,16 @@
 				37AE15EE1C08BB9F0039F04E /* KeysGenerator.m */,
 				377E746C1C2965FB003C4C38 /* CathegoryViewController.h */,
 				377E746D1C2965FB003C4C38 /* CathegoryViewController.m */,
+				37FF88791C3B358900F1B100 /* ScrollViewController.h */,
+				37FF887A1C3B358900F1B100 /* ScrollViewController.m */,
+				37FF887C1C3B3AF100F1B100 /* TranDetailViewController.h */,
+				37FF887D1C3B3AF100F1B100 /* TranDetailViewController.m */,
+				37FF887F1C3B3C7100F1B100 /* DetailListViewController.h */,
+				37FF88801C3B3C7100F1B100 /* DetailListViewController.m */,
+				37FF88821C3B3E2000F1B100 /* CategoryPickerDataSource.h */,
+				37FF88831C3B3E2000F1B100 /* CatergoryPickerDataSource.m */,
+				3707AE541C4543C500C388E8 /* HBTransactionController.h */,
+				3707AE551C4543C500C388E8 /* HBTransactionController.m */,
 			);
 			path = WhereIsMyBucks;
 			sourceTree = "<group>";
@@ -294,13 +319,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37FF887B1C3B358900F1B100 /* ScrollViewController.m in Sources */,
 				37AE15E31C08796E0039F04E /* Event.m in Sources */,
 				377E746E1C2965FB003C4C38 /* CathegoryViewController.m in Sources */,
 				37AE15E11C08796E0039F04E /* Account.m in Sources */,
 				37AE15E61C08796E0039F04E /* Balance+CoreDataProperties.m in Sources */,
 				37AE15DF1C08796E0039F04E /* Transaction.m in Sources */,
+				3707AE561C4543C500C388E8 /* HBTransactionController.m in Sources */,
 				37AB93E51C03CEB000BFB2E9 /* DetailViewController.m in Sources */,
 				37AB93E21C03CEB000BFB2E9 /* MasterViewController.m in Sources */,
+				37FF887E1C3B3AF100F1B100 /* TranDetailViewController.m in Sources */,
 				37AE15E21C08796E0039F04E /* Event+CoreDataProperties.m in Sources */,
 				37AB93DC1C03CEAF00BFB2E9 /* AppDelegate.m in Sources */,
 				37AE15EC1C08A6810039F04E /* NewTranViewController.m in Sources */,
@@ -310,10 +338,12 @@
 				37AE15EF1C08BB9F0039F04E /* KeysGenerator.m in Sources */,
 				37AE15E71C08796E0039F04E /* Balance.m in Sources */,
 				37AE15DE1C08796E0039F04E /* Transaction+CoreDataProperties.m in Sources */,
+				37FF88811C3B3C7100F1B100 /* DetailListViewController.m in Sources */,
 				37AB93DF1C03CEB000BFB2E9 /* WhereIsMyBucks.xcdatamodeld in Sources */,
 				37AE15E91C08796E0039F04E /* CashFlow.m in Sources */,
 				37AE15E41C08796E0039F04E /* Cathegory+CoreDataProperties.m in Sources */,
 				37AE15E01C08796E0039F04E /* Account+CoreDataProperties.m in Sources */,
+				37FF88841C3B3E2000F1B100 /* CatergoryPickerDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HBTransactionController.h"
 
-@interface NewTranViewController : UIViewController
+@interface NewTranViewController : HBTransactionController
 
 @end

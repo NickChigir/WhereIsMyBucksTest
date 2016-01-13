@@ -21,13 +21,20 @@
 - (IBAction)SaveOrCancel:(id)sender {
     if ([(UIButton *)sender tag]==1){
         //save changes
-          NSManagedObjectContext *context = [(AppDelegate *)[[UIApplication sharedApplication]delegate]  managedObjectContext];
+        /*  NSManagedObjectContext *context = [(AppDelegate *)[[UIApplication sharedApplication]delegate]  managedObjectContext];
       //  NSEntityDescription *entity = [NSEntityDescription entityForName:@"Transaction" inManagedObjectContext:context];
          Transaction *newTran = [NSEntityDescription insertNewObjectForEntityForName:@"Transaction" inManagedObjectContext:context];
-        newTran.tranDate = [self.TranDate.date timeIntervalSince1970];
-        newTran.tranAmount = [NSDecimalNumber decimalNumberWithString:  self.AmountText.text];
+         */
+        self.transaction.tranDate = [self.TranDate.date timeIntervalSince1970];
+        self.transaction.tranAmount = [NSDecimalNumber decimalNumberWithString:  self.AmountText.text];
         
-        newTran.id = [KeysGenerator getNewTranId];
+        self.transaction.id = [KeysGenerator getNewTranId];
+        
+        //send notification
+        [[NSNotificationCenter defaultCenter] postNotificationName:AMOUNT_UPDATED_NOTIFICATION object:nil];
+        if (self.scrollDelegate){
+            [self.scrollDelegate jumpToNextPage];
+         }
        // int32_t n32 = n.intValue;
         
      
@@ -39,18 +46,19 @@
         
          //[NSDate date].ti
          // Save the context.
-         NSError *error = nil;
+      /*   NSError *error = nil;
          if (![context save:&error]) {
          // Replace this implementation with code to handle the error appropriately.
          // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
          NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
          abort();
          }
+       */
          
         
     }
     //close this view
-    [self dismissViewControllerAnimated:YES completion:nil];
+   // [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)viewDidLoad {

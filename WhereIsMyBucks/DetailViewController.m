@@ -7,8 +7,11 @@
 //
 
 #import "DetailViewController.h"
+#import "Cathegory.h"
 
 @interface DetailViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end
 
@@ -36,8 +39,8 @@
         
        
 
-        self.detailNavigation.title =[NSString stringWithFormat:@"Transaction details: %@ , %@", tranDate, self.detailItem.tranAmount];
-        
+        self.detailNavigation.title =[NSString stringWithFormat:@"Transaction at: %@", tranDate];
+        self.titleLabel.text = self.detailItem.tranAmount.description;
            }
 }
 
@@ -45,11 +48,27 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    self.tableView.dataSource =self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.detailItem.toCashFlow.count;
+    
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    CashFlow *content = self.detailItem.toCashFlow[indexPath.row];
+    cell.textLabel.text = content.linkToCathegory.cathegoryName;
+    cell.detailTextLabel.text = [NSString  stringWithFormat:@"%.00f", content.amount.floatValue];
+    return cell;
+    
+}
+
 
 @end
