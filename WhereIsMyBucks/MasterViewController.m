@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 #import "Transaction.h"
+#import "Cathegory.h"
 
 @interface MasterViewController ()
 
@@ -43,7 +44,16 @@
 }
 
 - (void)insertNewObject:(id)sender {
-    [self performSegueWithIdentifier:@"addTran" sender:self];
+    //check if all dictionaries are ready
+   NSInteger count =[Cathegory getItemsCountForContext : self.managedObjectContext];
+    if (count==0) {
+        UIAlertView *warning = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Please add at least 1 catetgory first" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        [warning show];
+        
+    } else {
+        [self performSegueWithIdentifier:@"addTran" sender:self];
+    }
+   
   /*  NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];

@@ -14,6 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Cathegory : NSManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
++(NSInteger) getItemsCountForContext:(NSManagedObjectContext *) context;
+
+    
+
 
 @end
 

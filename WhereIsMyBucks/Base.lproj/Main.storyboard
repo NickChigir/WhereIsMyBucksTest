@@ -228,7 +228,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gQ0-Lz-LGl" firstAttribute="leading" secondItem="JuD-5I-vMA" secondAttribute="leading" id="29v-aW-IXq"/>
                             <constraint firstItem="gSF-c5-CIU" firstAttribute="top" secondItem="6qw-NJ-el4" secondAttribute="bottom" constant="8" symbolic="YES" id="2vL-OV-XHm"/>
@@ -310,7 +309,6 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="kLC-pO-P71" firstAttribute="baseline" secondItem="gYN-U7-dAh" secondAttribute="baseline" id="5Kh-fX-m5F"/>
                             <constraint firstItem="lqB-lG-Tv6" firstAttribute="baseline" secondItem="gYN-U7-dAh" secondAttribute="baseline" constant="351" id="5dM-iE-0ew"/>
@@ -391,7 +389,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -405,7 +403,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Bs0-A6-nl4" firstAttribute="baseline" secondItem="S11-Tf-MmO" secondAttribute="baseline" id="2et-kF-eXp"/>
                             <constraint firstItem="oKe-lg-jxo" firstAttribute="centerX" secondItem="S11-Tf-MmO" secondAttribute="centerX" id="9yw-lv-Kd0"/>
@@ -440,7 +437,6 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DJo-WS-3A6">
                                 <rect key="frame" x="0.0" y="28" width="600" height="514"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYm-8T-fuS">
                                 <rect key="frame" x="271" y="550" width="109" height="30"/>
@@ -458,6 +454,8 @@
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="82M-Nq-0My">
                                 <rect key="frame" x="280" y="505" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.43857715260000002" green="0.53958813100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="pageChanged:" destination="ggg-uC-TM8" eventType="valueChanged" id="BwI-aT-jAM"/>
                                 </connections>
