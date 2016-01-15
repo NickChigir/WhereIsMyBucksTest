@@ -69,34 +69,34 @@
 		37AB93F31C03CEB100BFB2E9 /* WhereIsMyBucksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhereIsMyBucksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37AB93F71C03CEB100BFB2E9 /* WhereIsMyBucksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereIsMyBucksTests.m; sourceTree = "<group>"; };
 		37AB93F91C03CEB100BFB2E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37AE15C61C08796C0039F04E /* Transaction+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Transaction+CoreDataProperties.h"; path = "WhereIsMyBucks/Transaction+CoreDataProperties.h"; sourceTree = "<group>"; };
-		37AE15C71C08796D0039F04E /* Transaction+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Transaction+CoreDataProperties.m"; path = "WhereIsMyBucks/Transaction+CoreDataProperties.m"; sourceTree = "<group>"; };
+		37AE15C61C08796C0039F04E /* Transaction+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transaction+CoreDataProperties.h"; sourceTree = "<group>"; };
+		37AE15C71C08796D0039F04E /* Transaction+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transaction+CoreDataProperties.m"; sourceTree = "<group>"; };
 		37AE15C81C08796D0039F04E /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Transaction.h; path = WhereIsMyBucks/Transaction.h; sourceTree = "<group>"; };
 		37AE15C91C08796D0039F04E /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Transaction.m; path = WhereIsMyBucks/Transaction.m; sourceTree = "<group>"; };
-		37AE15CA1C08796D0039F04E /* Account+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Account+CoreDataProperties.h"; path = "WhereIsMyBucks/Account+CoreDataProperties.h"; sourceTree = "<group>"; };
-		37AE15CB1C08796D0039F04E /* Account+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Account+CoreDataProperties.m"; path = "WhereIsMyBucks/Account+CoreDataProperties.m"; sourceTree = "<group>"; };
+		37AE15CA1C08796D0039F04E /* Account+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Account+CoreDataProperties.h"; sourceTree = "<group>"; };
+		37AE15CB1C08796D0039F04E /* Account+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Account+CoreDataProperties.m"; sourceTree = "<group>"; };
 		37AE15CC1C08796D0039F04E /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Account.h; path = WhereIsMyBucks/Account.h; sourceTree = "<group>"; };
 		37AE15CD1C08796D0039F04E /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Account.m; path = WhereIsMyBucks/Account.m; sourceTree = "<group>"; };
-		37AE15CE1C08796D0039F04E /* Event+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Event+CoreDataProperties.h"; path = "WhereIsMyBucks/Event+CoreDataProperties.h"; sourceTree = "<group>"; };
-		37AE15CF1C08796D0039F04E /* Event+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Event+CoreDataProperties.m"; path = "WhereIsMyBucks/Event+CoreDataProperties.m"; sourceTree = "<group>"; };
+		37AE15CE1C08796D0039F04E /* Event+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Event+CoreDataProperties.h"; sourceTree = "<group>"; };
+		37AE15CF1C08796D0039F04E /* Event+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Event+CoreDataProperties.m"; sourceTree = "<group>"; };
 		37AE15D01C08796D0039F04E /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = WhereIsMyBucks/Event.h; sourceTree = "<group>"; };
 		37AE15D11C08796D0039F04E /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = WhereIsMyBucks/Event.m; sourceTree = "<group>"; };
-		37AE15D21C08796D0039F04E /* Cathegory+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Cathegory+CoreDataProperties.h"; path = "WhereIsMyBucks/Cathegory+CoreDataProperties.h"; sourceTree = "<group>"; };
-		37AE15D31C08796D0039F04E /* Cathegory+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Cathegory+CoreDataProperties.m"; path = "WhereIsMyBucks/Cathegory+CoreDataProperties.m"; sourceTree = "<group>"; };
+		37AE15D21C08796D0039F04E /* Cathegory+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Cathegory+CoreDataProperties.h"; sourceTree = "<group>"; };
+		37AE15D31C08796D0039F04E /* Cathegory+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Cathegory+CoreDataProperties.m"; sourceTree = "<group>"; };
 		37AE15D41C08796D0039F04E /* Cathegory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cathegory.h; path = WhereIsMyBucks/Cathegory.h; sourceTree = "<group>"; };
 		37AE15D51C08796D0039F04E /* Cathegory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cathegory.m; path = WhereIsMyBucks/Cathegory.m; sourceTree = "<group>"; };
-		37AE15D61C08796D0039F04E /* Balance+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Balance+CoreDataProperties.h"; path = "WhereIsMyBucks/Balance+CoreDataProperties.h"; sourceTree = "<group>"; };
-		37AE15D71C08796D0039F04E /* Balance+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Balance+CoreDataProperties.m"; path = "WhereIsMyBucks/Balance+CoreDataProperties.m"; sourceTree = "<group>"; };
+		37AE15D61C08796D0039F04E /* Balance+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Balance+CoreDataProperties.h"; sourceTree = "<group>"; };
+		37AE15D71C08796D0039F04E /* Balance+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Balance+CoreDataProperties.m"; sourceTree = "<group>"; };
 		37AE15D81C08796D0039F04E /* Balance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Balance.h; path = WhereIsMyBucks/Balance.h; sourceTree = "<group>"; };
 		37AE15D91C08796D0039F04E /* Balance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Balance.m; path = WhereIsMyBucks/Balance.m; sourceTree = "<group>"; };
-		37AE15DA1C08796D0039F04E /* CashFlow+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CashFlow+CoreDataProperties.h"; path = "WhereIsMyBucks/CashFlow+CoreDataProperties.h"; sourceTree = "<group>"; };
-		37AE15DB1C08796D0039F04E /* CashFlow+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CashFlow+CoreDataProperties.m"; path = "WhereIsMyBucks/CashFlow+CoreDataProperties.m"; sourceTree = "<group>"; };
-		37AE15DC1C08796D0039F04E /* CashFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CashFlow.h; path = WhereIsMyBucks/CashFlow.h; sourceTree = "<group>"; };
-		37AE15DD1C08796D0039F04E /* CashFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CashFlow.m; path = WhereIsMyBucks/CashFlow.m; sourceTree = "<group>"; };
+		37AE15DA1C08796D0039F04E /* CashFlow+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CashFlow+CoreDataProperties.h"; sourceTree = "<group>"; };
+		37AE15DB1C08796D0039F04E /* CashFlow+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CashFlow+CoreDataProperties.m"; sourceTree = "<group>"; };
+		37AE15DC1C08796D0039F04E /* CashFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashFlow.h; sourceTree = "<group>"; };
+		37AE15DD1C08796D0039F04E /* CashFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashFlow.m; sourceTree = "<group>"; };
 		37AE15EA1C08A6810039F04E /* NewTranViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTranViewController.h; sourceTree = "<group>"; };
 		37AE15EB1C08A6810039F04E /* NewTranViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTranViewController.m; sourceTree = "<group>"; };
-		37AE15ED1C08BB9F0039F04E /* KeysGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeysGenerator.h; sourceTree = "<group>"; };
-		37AE15EE1C08BB9F0039F04E /* KeysGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeysGenerator.m; sourceTree = "<group>"; };
+		37AE15ED1C08BB9F0039F04E /* KeysGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeysGenerator.h; path = WhereIsMyBucks/KeysGenerator.h; sourceTree = "<group>"; };
+		37AE15EE1C08BB9F0039F04E /* KeysGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeysGenerator.m; path = WhereIsMyBucks/KeysGenerator.m; sourceTree = "<group>"; };
 		37FF88791C3B358900F1B100 /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
 		37FF887A1C3B358900F1B100 /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
 		37FF887C1C3B3AF100F1B100 /* TranDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranDetailViewController.h; sourceTree = "<group>"; };
@@ -125,33 +125,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3707AE571C4902D800C388E8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37AB93E01C03CEB000BFB2E9 /* MasterViewController.h */,
+				37AB93E11C03CEB000BFB2E9 /* MasterViewController.m */,
+				37AB93E31C03CEB000BFB2E9 /* DetailViewController.h */,
+				37AB93E41C03CEB000BFB2E9 /* DetailViewController.m */,
+				37AE15EA1C08A6810039F04E /* NewTranViewController.h */,
+				37AE15EB1C08A6810039F04E /* NewTranViewController.m */,
+				377E746C1C2965FB003C4C38 /* CathegoryViewController.h */,
+				377E746D1C2965FB003C4C38 /* CathegoryViewController.m */,
+				37FF88791C3B358900F1B100 /* ScrollViewController.h */,
+				37FF887A1C3B358900F1B100 /* ScrollViewController.m */,
+				37FF887C1C3B3AF100F1B100 /* TranDetailViewController.h */,
+				37FF887D1C3B3AF100F1B100 /* TranDetailViewController.m */,
+				37FF887F1C3B3C7100F1B100 /* DetailListViewController.h */,
+				37FF88801C3B3C7100F1B100 /* DetailListViewController.m */,
+				3707AE541C4543C500C388E8 /* HBTransactionController.h */,
+				3707AE551C4543C500C388E8 /* HBTransactionController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3707AE581C4902F200C388E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				37AE15ED1C08BB9F0039F04E /* KeysGenerator.h */,
+				37AE15EE1C08BB9F0039F04E /* KeysGenerator.m */,
+				37AE15D41C08796D0039F04E /* Cathegory.h */,
+				37AE15D51C08796D0039F04E /* Cathegory.m */,
+				37AE15C81C08796D0039F04E /* Transaction.h */,
+				37AE15C91C08796D0039F04E /* Transaction.m */,
+				37AE15CC1C08796D0039F04E /* Account.h */,
+				37AE15CD1C08796D0039F04E /* Account.m */,
+				37AE15D01C08796D0039F04E /* Event.h */,
+				37AE15D11C08796D0039F04E /* Event.m */,
+				37AE15D81C08796D0039F04E /* Balance.h */,
+				37AE15D91C08796D0039F04E /* Balance.m */,
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		37AB93CB1C03CEAE00BFB2E9 = {
 			isa = PBXGroup;
 			children = (
-				37AE15C61C08796C0039F04E /* Transaction+CoreDataProperties.h */,
-				37AE15C71C08796D0039F04E /* Transaction+CoreDataProperties.m */,
-				37AE15C81C08796D0039F04E /* Transaction.h */,
-				37AE15C91C08796D0039F04E /* Transaction.m */,
-				37AE15CA1C08796D0039F04E /* Account+CoreDataProperties.h */,
-				37AE15CB1C08796D0039F04E /* Account+CoreDataProperties.m */,
-				37AE15CC1C08796D0039F04E /* Account.h */,
-				37AE15CD1C08796D0039F04E /* Account.m */,
-				37AE15CE1C08796D0039F04E /* Event+CoreDataProperties.h */,
-				37AE15CF1C08796D0039F04E /* Event+CoreDataProperties.m */,
-				37AE15D01C08796D0039F04E /* Event.h */,
-				37AE15D11C08796D0039F04E /* Event.m */,
-				37AE15D21C08796D0039F04E /* Cathegory+CoreDataProperties.h */,
-				37AE15D31C08796D0039F04E /* Cathegory+CoreDataProperties.m */,
-				37AE15D41C08796D0039F04E /* Cathegory.h */,
-				37AE15D51C08796D0039F04E /* Cathegory.m */,
-				37AE15D61C08796D0039F04E /* Balance+CoreDataProperties.h */,
-				37AE15D71C08796D0039F04E /* Balance+CoreDataProperties.m */,
-				37AE15D81C08796D0039F04E /* Balance.h */,
-				37AE15D91C08796D0039F04E /* Balance.m */,
-				37AE15DA1C08796D0039F04E /* CashFlow+CoreDataProperties.h */,
-				37AE15DB1C08796D0039F04E /* CashFlow+CoreDataProperties.m */,
-				37AE15DC1C08796D0039F04E /* CashFlow.h */,
-				37AE15DD1C08796D0039F04E /* CashFlow.m */,
 				37AB93D61C03CEAF00BFB2E9 /* WhereIsMyBucks */,
 				37AB93F61C03CEB100BFB2E9 /* WhereIsMyBucksTests */,
 				37AB93D51C03CEAF00BFB2E9 /* Products */,
@@ -170,34 +189,32 @@
 		37AB93D61C03CEAF00BFB2E9 /* WhereIsMyBucks */ = {
 			isa = PBXGroup;
 			children = (
+				37AB93E61C03CEB000BFB2E9 /* Main.storyboard */,
+				3707AE571C4902D800C388E8 /* Controller */,
+				3707AE581C4902F200C388E8 /* Model */,
+				37AE15C61C08796C0039F04E /* Transaction+CoreDataProperties.h */,
+				37AE15C71C08796D0039F04E /* Transaction+CoreDataProperties.m */,
+				37AE15CA1C08796D0039F04E /* Account+CoreDataProperties.h */,
+				37AE15CB1C08796D0039F04E /* Account+CoreDataProperties.m */,
+				37AE15CE1C08796D0039F04E /* Event+CoreDataProperties.h */,
+				37AE15CF1C08796D0039F04E /* Event+CoreDataProperties.m */,
+				37AE15D21C08796D0039F04E /* Cathegory+CoreDataProperties.h */,
+				37AE15D31C08796D0039F04E /* Cathegory+CoreDataProperties.m */,
+				37AE15D61C08796D0039F04E /* Balance+CoreDataProperties.h */,
+				37AE15D71C08796D0039F04E /* Balance+CoreDataProperties.m */,
+				37AE15DA1C08796D0039F04E /* CashFlow+CoreDataProperties.h */,
+				37AE15DB1C08796D0039F04E /* CashFlow+CoreDataProperties.m */,
+				37AE15DC1C08796D0039F04E /* CashFlow.h */,
+				37AE15DD1C08796D0039F04E /* CashFlow.m */,
 				37AB93DA1C03CEAF00BFB2E9 /* AppDelegate.h */,
 				37AB93DB1C03CEAF00BFB2E9 /* AppDelegate.m */,
-				37AB93E01C03CEB000BFB2E9 /* MasterViewController.h */,
-				37AB93E11C03CEB000BFB2E9 /* MasterViewController.m */,
-				37AB93E31C03CEB000BFB2E9 /* DetailViewController.h */,
-				37AB93E41C03CEB000BFB2E9 /* DetailViewController.m */,
-				37AB93E61C03CEB000BFB2E9 /* Main.storyboard */,
 				37AB93E91C03CEB100BFB2E9 /* Assets.xcassets */,
 				37AB93EB1C03CEB100BFB2E9 /* LaunchScreen.storyboard */,
 				37AB93EE1C03CEB100BFB2E9 /* Info.plist */,
 				37AB93DD1C03CEB000BFB2E9 /* WhereIsMyBucks.xcdatamodeld */,
 				37AB93D71C03CEAF00BFB2E9 /* Supporting Files */,
-				37AE15EA1C08A6810039F04E /* NewTranViewController.h */,
-				37AE15EB1C08A6810039F04E /* NewTranViewController.m */,
-				37AE15ED1C08BB9F0039F04E /* KeysGenerator.h */,
-				37AE15EE1C08BB9F0039F04E /* KeysGenerator.m */,
-				377E746C1C2965FB003C4C38 /* CathegoryViewController.h */,
-				377E746D1C2965FB003C4C38 /* CathegoryViewController.m */,
-				37FF88791C3B358900F1B100 /* ScrollViewController.h */,
-				37FF887A1C3B358900F1B100 /* ScrollViewController.m */,
-				37FF887C1C3B3AF100F1B100 /* TranDetailViewController.h */,
-				37FF887D1C3B3AF100F1B100 /* TranDetailViewController.m */,
-				37FF887F1C3B3C7100F1B100 /* DetailListViewController.h */,
-				37FF88801C3B3C7100F1B100 /* DetailListViewController.m */,
 				37FF88821C3B3E2000F1B100 /* CategoryPickerDataSource.h */,
 				37FF88831C3B3E2000F1B100 /* CatergoryPickerDataSource.m */,
-				3707AE541C4543C500C388E8 /* HBTransactionController.h */,
-				3707AE551C4543C500C388E8 /* HBTransactionController.m */,
 			);
 			path = WhereIsMyBucks;
 			sourceTree = "<group>";
