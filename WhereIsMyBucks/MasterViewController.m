@@ -51,7 +51,8 @@
         [warning show];
         
     } else {
-        [self performSegueWithIdentifier:@"addTran" sender:self];
+       // [self performSegueWithIdentifier:@"addTran" sender:self];
+        [self performSegueWithIdentifier:@"addTranNew" sender:self];
     }
    
   /*  NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
