@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CathegoryViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface CathegoryViewController : UIViewController <UITableViewDataSource, UITableViewDelegate,UITextFieldDelegate>
 
 
 @end

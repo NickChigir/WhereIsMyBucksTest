@@ -11,32 +11,48 @@
 #import <CoreData/CoreData.h>
 #import "AppDelegate.h"
 
-#define DUMMY_NAME @"<type name>"
-#define DUMMY_DESC @"<description>"
+#define DUMMY_NAME @""
+#define DUMMY_DESC @""
 @interface CathegoryViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UITextField *cathegoryName;
-@property (weak, nonatomic) IBOutlet UITextField *cathegoryDesc;
+//@property (weak, nonatomic) IBOutlet UITextField *cathegoryName;
+//@property (weak, nonatomic) IBOutlet UITextField *cathegoryDesc;
 
 @property (nonatomic) NSMutableArray<Cathegory *> *fetchResult;
 @property (weak,nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic) NSIndexPath *currentRow;
+@property (nonatomic) BOOL shouldSave;
 
 @end
 
 @implementation CathegoryViewController
+- (IBAction)edit:(UIButton *)sender {
+          NSIndexPath *lastRowIndex = [NSIndexPath indexPathForRow:self.fetchResult.count inSection:0];
+    
+    self.tableView.editing = !self.tableView.editing;
+    if (self.tableView.editing) {
+   
+        [self.tableView insertRowsAtIndexPaths:@[lastRowIndex] withRowAnimation:UITableViewRowAnimationAutomatic];
+    } else {
+          [self.tableView deleteRowsAtIndexPaths:@[lastRowIndex] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
 - (IBAction)addNew:(id)sender {
-    Cathegory *objToUpdate = self.fetchResult[self.currentRow.row];
+    /*Cathegory *objToUpdate = self.fetchResult[self.currentRow.row];
     objToUpdate.cathegoryName = self.cathegoryName.text;
     objToUpdate.cathegoryDescription = self.cathegoryDesc.text;
-    if (self.currentRow != nil  && self.currentRow.row== (self.fetchResult.count-1)){
+     */
+   // if (self.currentRow != nil  && self.currentRow.row== (self.fetchResult.count-1)){
         // add new dummy row
             [self.fetchResult addObject:[self createDummyCathegory]];
+      NSIndexPath *lastRowIndex = [NSIndexPath indexPathForRow:self.fetchResult.count-1 inSection:0];
+         [self.tableView insertRowsAtIndexPaths:@[lastRowIndex] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
         NSLog(@"new dummy row aded");
-    }
+   // }
         
     
-    [self.tableView reloadData];
+   // [self.tableView reloadData];
 }
 
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -49,30 +65,18 @@
 }
 
 - (IBAction)toEditMode:(id)sender {
-    
-
-    
     self.tableView.editing = YES;
     NSLog(@"Editing begin");
 }
+
 - (IBAction)saveOrCancel:(UIButton *)sender {
     if ([(UIButton *)sender tag]==1){
-        
-        //delete dummy object
-        Cathegory *dummyObject = self.fetchResult.lastObject;
-        [self.managedObjectContext deleteObject:dummyObject];
         //save changes
-        NSError *error = nil;
-        if (![self.managedObjectContext save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
-        }
-        
+        self.shouldSave =YES;
         
     }
     else {
+        self.shouldSave =NO;
         [self.managedObjectContext reset];
         NSLog(@"changes were reseted");
     }
@@ -115,7 +119,7 @@
         abort();
     }
     
-    [self.fetchResult addObject:[self createDummyCathegory]];
+   // [self.fetchResult addObject:[self createDummyCathegory]];
     
     
     self.tableView.dataSource = self;
@@ -123,7 +127,21 @@
     
 }
 
+-(void)viewDidDisappear:(BOOL)animated{
+    if (self.shouldSave) {
+        NSLog(@"Save changes");
+        NSError *error = nil;
+        if (![self.managedObjectContext save:&error]) {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
 
+    }
+    
+    NSLog(@"Disappeared!");
+}
 
 
 - (void)didReceiveMemoryWarning {
@@ -133,19 +151,44 @@
 #pragma mark -  datasource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.fetchResult.count;
+    
+    NSInteger rowCount =self.fetchResult.count;
+    rowCount+=self.tableView.editing?1:0;
+    NSLog(@"number of rows: %i", rowCount);
+    NSLog(@"Editing mode: %i", self.tableView.editing?1:0);
+    return rowCount;
 }
 
 // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
 // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"CathegoryCell" forIndexPath:indexPath];
-    Cathegory *content = self.fetchResult[indexPath.row];
-    cell.textLabel.text = content.cathegoryName;
-    cell.detailTextLabel.text = content.cathegoryDescription;
+    NSString *cellName =@"CathegoryCell";
+    if (indexPath.row == self.fetchResult.count) {
+        //this means we are in editing mode, add "add new" button cell
+        cellName =@"newCategory";
+    }
+    
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellName forIndexPath:indexPath];
+   
+    [self configureCell:cell forRowAtIndexPath:indexPath];
     return cell;
 }
+
+-(void) configureCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *) indexPath {
+    
+    if (indexPath.row < self.fetchResult.count) {
+        Cathegory *content = self.fetchResult[indexPath.row];
+        UITextField *nameField = [cell viewWithTag:2];
+        UITextField *descField = [cell viewWithTag:3];
+        nameField.text = content.cathegoryName;
+        descField.text = content.cathegoryDescription;
+        nameField.delegate = self;
+        descField.delegate = self;
+    }
+    
+}
+
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -160,7 +203,7 @@
 
 #pragma mark table delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(indexPath.row == (self.fetchResult.count - 1)){
+  /*  if(indexPath.row == (self.fetchResult.count - 1)){
         self.cathegoryName.text = @"";
         self.cathegoryDesc.text = @"";
         
@@ -169,12 +212,13 @@
         self.cathegoryName.text = self.fetchResult[indexPath.row].cathegoryName;
         self.cathegoryDesc.text = self.fetchResult[indexPath.row].cathegoryDescription;
       }
+   */
   self.currentRow = indexPath;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
-    if (indexPath.row == self.fetchResult.count -1){
+    if (indexPath.row == self.fetchResult.count){
         return NO;
     }
         
@@ -209,6 +253,38 @@
     [self.fetchResult removeObjectAtIndex:row];
     
 }
+
+
+#pragma mark - text field delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    UITableViewCell *cell = (UITableViewCell *)[[textField superview] superview];
+    //UITableView *table = (UITableView *)[cell superview];
+    NSIndexPath *textFieldIndexPath = [self.tableView indexPathForCell:cell];
+  
+        Cathegory *cat = self.fetchResult[textFieldIndexPath.row];
+        
+    if(textField.tag ==2){
+        cat.cathegoryName = textField.text;
+    }else{
+        cat.cathegoryDescription = textField.text;
+    }
+        
+    NSLog(@"DidEndEditing");
+}
+
+-(BOOL)textFieldShouldEndEditing:(UITextField *)textField{
+    NSLog(@"WillEndEditing!");
+    return YES;
+}
+
 
 /*
 #pragma mark - Navigation

@@ -24,6 +24,14 @@
 @end
 
 @implementation TransactionViewController
+- (IBAction)addDetail:(UIButton *)sender {
+    UITableViewCell *cell = (UITableViewCell *)[[sender superview] superview];
+    //UITableView *table = (UITableView *)[cell superview];
+    NSIndexPath *cellIndexPath = [self.tableView indexPathForCell:cell];
+    //- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self tableView: self.tableView commitEditingStyle:UITableViewCellEditingStyleInsert forRowAtIndexPath:cellIndexPath];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
