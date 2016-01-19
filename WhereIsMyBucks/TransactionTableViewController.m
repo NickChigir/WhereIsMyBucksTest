@@ -1,29 +1,27 @@
 //
-//  TransactionViewController.m
+//  TransactionTableViewController.m
 //  WhereIsMyBucks
 //
-//  Created by Nick Chigir on 1/16/16.
+//  Created by Nick Chigir on 1/19/16.
 //  Copyright © 2016 Nick Chigir. All rights reserved.
 //
 
-#import "TransactionViewController.h"
+#import "TransactionTableViewController.h"
 #import "AppDelegate.h"
 #import "Cathegory.h"
 #import "CategoryListViewController.h"
 
 #define DETAIL_SECTION 1
 #define MAIN_SECTION 0
-
-@interface TransactionViewController ()
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic) NSInteger detailCount;
-@property (weak,nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (weak, nonatomic)  UITextField *totalAmountField;
-@property (weak, nonatomic)  UIDatePicker *datePicker;
-
+@interface TransactionTableViewController ()
+  @property (nonatomic) NSInteger detailCount;
+  @property (weak,nonatomic) NSManagedObjectContext *managedObjectContext;
+  @property (weak, nonatomic)  UITextField *totalAmountField;
+  @property (weak, nonatomic)  UIDatePicker *datePicker;
 @end
 
-@implementation TransactionViewController
+@implementation TransactionTableViewController
+
 - (IBAction)addDetail:(UIButton *)sender {
     UITableViewCell *cell = (UITableViewCell *)[[sender superview] superview];
     //UITableView *table = (UITableView *)[cell superview];
@@ -62,7 +60,7 @@
     return 2;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-   // return self.cashFlowList.count;
+    // return self.cashFlowList.count;
     if (section == MAIN_SECTION){
         return 2;
     }
@@ -95,11 +93,11 @@
     }
     //cellName    =   @"amountCell";
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellName forIndexPath:indexPath];
-  //  if ([cellName isEqualToString:@"detailCell"]){
-  //  cell.imageView.image = [UIImage imageNamed:@"1"];
-  //  }
+    //  if ([cellName isEqualToString:@"detailCell"]){
+    //  cell.imageView.image = [UIImage imageNamed:@"1"];
+    //  }
     
-       return [self configureCell:cell withName:cellName atIndexPath:indexPath];
+    return [self configureCell:cell withName:cellName atIndexPath:indexPath];
     
 }
 
@@ -121,7 +119,7 @@
         
     }
     else {
-         NSLog(@"Insert cell");
+        NSLog(@"Insert cell");
         [self insertDetailAtRow: indexPath.row];
         [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         
@@ -140,8 +138,8 @@
 -(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section==DETAIL_SECTION && indexPath.row ==(self.detailCount-1)) {
         return UITableViewCellEditingStyleInsert;//    UITableViewCellEditingStyleNone,
-       // UITableViewCellEditingStyleDelete,
-      //  UITableViewCellEditingStyleInsert
+        // UITableViewCellEditingStyleDelete,
+        //  UITableViewCellEditingStyleInsert
     } else {
         return indexPath.section == MAIN_SECTION ?UITableViewCellEditingStyleNone:UITableViewCellEditingStyleDelete;
         
@@ -165,16 +163,16 @@
 #pragma mark - model
 -(Transaction *)transaction{
     if (_transaction==nil) {
-
+        
         _transaction = [NSEntityDescription insertNewObjectForEntityForName:@"Transaction" inManagedObjectContext:self.managedObjectContext];
     }
     return _transaction;
 }
 -(void) loadData {
     // load data from Core object
-   
+    
     self.managedObjectContext = [(AppDelegate *)[[UIApplication sharedApplication]delegate]  managedObjectContext];
-     self.detailCount =self.transaction.toCashFlow.count+  1;
+    self.detailCount =self.transaction.toCashFlow.count+  1;
     
     
     //  NSEntityDescription *entity = [NSEntityDescription entityForName:@"Transaction" inManagedObjectContext:context];
@@ -185,26 +183,26 @@
     self.detailCount --;
     
     //  NSIndexSet * rowToDelete = [NSIndexSet indexSetWithIndex:row];
-
+    
     
     CashFlow *detail = self.transaction.toCashFlow[row];
     detail.linkToTransaction =nil;
     [self.managedObjectContext deleteObject:detail];
-
+    
 }
 -(void) insertDetailAtRow:(NSInteger) row{
     self.detailCount++;
     
     CashFlow *newDetail =[NSEntityDescription insertNewObjectForEntityForName:@"CashFlow" inManagedObjectContext:self.managedObjectContext];
-   // newDetail.amount = [NSDecimalNumber decimalNumberWithString: self.amountField.text];
-   // NSInteger catIndex = [self.cathegoryPicker selectedRowInComponent:0];
-   // newDetail.linkToCathegory =[self.pickerDataSource getCathegoryAtIndex:catIndex];
+    // newDetail.amount = [NSDecimalNumber decimalNumberWithString: self.amountField.text];
+    // NSInteger catIndex = [self.cathegoryPicker selectedRowInComponent:0];
+    // newDetail.linkToCathegory =[self.pickerDataSource getCathegoryAtIndex:catIndex];
     newDetail.linkToTransaction =self.transaction;
     
     NSLog(@"cashFlow list %@", self.transaction.toCashFlow);
-   // NSOrderedSet *s =self.transaction.toCashFlow;
-   // NSLog(@"%i", s.count);
-
+    // NSOrderedSet *s =self.transaction.toCashFlow;
+    // NSLog(@"%i", s.count);
+    
     
 }
 
@@ -217,12 +215,12 @@
         UITextField *amount =[cell viewWithTag:2];
         Cathegory *category =self.transaction.toCashFlow[indexPath.row]
         .linkToCathegory;
-
-       // categoryButton.titleLabel.text =category.cathegoryName;//UIControlStateNormal
+        
+        // categoryButton.titleLabel.text =category.cathegoryName;//UIControlStateNormal
         if (category ==nil) {
             [categoryButton setTitle:@"Unknown category" forState:UIControlStateNormal];
         }else{
-        [categoryButton setTitle:category.cathegoryName forState:UIControlStateNormal];
+            [categoryButton setTitle:category.cathegoryName forState:UIControlStateNormal];
         }
         
         amount.text = self.transaction.toCashFlow[indexPath.row].amount.description;
@@ -239,12 +237,12 @@
     else if ([name isEqualToString:@"dateCell"]){
         self.datePicker = (UIDatePicker *)[cell viewWithTag:1];
         if (self.transaction.tranDate>0) {
-             self.datePicker.date =[[NSDate alloc] initWithTimeIntervalSince1970:self.transaction.tranDate];
+            self.datePicker.date =[[NSDate alloc] initWithTimeIntervalSince1970:self.transaction.tranDate];
         }
-      
-
         
-            
+        
+        
+        
     }
     
     return cell;
@@ -263,7 +261,7 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
-
+    
     
 }
 #pragma mark - Navigation
@@ -276,7 +274,7 @@
     if ([segue.identifier isEqualToString:@"categoryList"]) {
         CategoryListViewController *destination =segue.destinationViewController;
         destination.transaction =self.transaction;
-      
+        
         destination.categoryButton = sender;
         UITableViewCell *cell = (UITableViewCell *)[[sender superview] superview];
         NSLog(@"cell %@",[[sender superview] superview].class);
@@ -285,7 +283,7 @@
         
         
         NSIndexPath *detailIndexPath = [self.tableView indexPathForCell:cell];
-          destination.detailIndex = detailIndexPath.row;
+        destination.detailIndex = detailIndexPath.row;
     }
     
     
@@ -327,5 +325,63 @@
     
     return YES;
 }
+
+
+
+//--==========================================
+
+/*
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    return cell;
+}
+*/
+
+/*
+// Override to support conditional editing of the table view.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+*/
+
+/*
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }   
+}
+*/
+
+/*
+// Override to support rearranging the table view.
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+}
+*/
+
+/*
+// Override to support conditional rearranging of the table view.
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return NO if you do not want the item to be re-orderable.
+    return YES;
+}
+*/
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end
