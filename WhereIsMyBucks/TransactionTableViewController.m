@@ -228,6 +228,8 @@
         
     }else if ([name isEqualToString:@"amountCell"]){
         self.totalAmountField = (UITextField *)[cell viewWithTag:1];
+        self.totalAmountField.tag=10;
+        self.totalAmountField.delegate = self;
         
         if (self.transaction.tranAmount!=nil && self.transaction.tranAmount.doubleValue != 0.0) {
             self.totalAmountField.text =self.transaction.tranAmount.description;
@@ -300,6 +302,7 @@
     return YES;
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField {
+    
     UITableViewCell *cell = (UITableViewCell *)[[textField superview] superview];
     //UITableView *table = (UITableView *)[cell superview];
     NSIndexPath *textFieldIndexPath = [self.tableView indexPathForCell:cell];

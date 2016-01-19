@@ -58,4 +58,26 @@
     
 }
 
++(void) createDefaultCategoriesForContext:(NSManagedObjectContext *) context{
+   // NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
+  
+    NSArray *defaultCategories = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"default category list"];
+    NSLog(@"default list: %@",defaultCategories );
+    for (NSDictionary *defaultProperty in defaultCategories) {
+        NSLog(@"category: %@",defaultProperty);
+        Cathegory *cathegory = [NSEntityDescription insertNewObjectForEntityForName:@"Cathegory" inManagedObjectContext:context];
+        cathegory.cathegoryName = [defaultProperty valueForKey:@"name"];
+        cathegory.cathegoryDescription =  [defaultProperty valueForKey:@"description"];
+        cathegory.imageName =[defaultProperty valueForKey:@"image"];
+    }
+    NSError *error = nil;
+    if (![context save:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        //abort();
+    }
+
+}
+
 @end

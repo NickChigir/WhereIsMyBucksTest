@@ -58,6 +58,7 @@
 
 -(void)loadData{
     self.managedObjectContext = [(AppDelegate *)[[UIApplication sharedApplication]delegate]  managedObjectContext];
+  
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
@@ -89,7 +90,7 @@
     if (row<self.fetchResult.count) {
         cell.textLabel.text =self.fetchResult[row].cathegoryName; //@"Category";
         cell.detailTextLabel.text =self.fetchResult[row].cathegoryDescription;//@"description";
-        cell.imageView.image =[UIImage imageNamed:@"1"];
+        cell.imageView.image =[UIImage imageNamed:self.fetchResult[row].imageName];
     }
   
     

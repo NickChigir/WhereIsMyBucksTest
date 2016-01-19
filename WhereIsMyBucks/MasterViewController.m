@@ -47,13 +47,14 @@
     //check if all dictionaries are ready
    NSInteger count =[Cathegory getItemsCountForContext : self.managedObjectContext];
     if (count==0) {
-        UIAlertView *warning = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Please add at least 1 catetgory first" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        [Cathegory createDefaultCategoriesForContext: self.managedObjectContext];
+        UIAlertView *warning = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Default category list loaded" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
         [warning show];
         
-    } else {
+    }
        // [self performSegueWithIdentifier:@"addTran" sender:self];
         [self performSegueWithIdentifier:@"addTranNew" sender:self];
-    }
+
    
   /*  NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];

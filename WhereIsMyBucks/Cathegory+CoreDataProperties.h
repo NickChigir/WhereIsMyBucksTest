@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Cathegory (CoreDataProperties)
 
+@property (nullable, nonatomic, retain) NSString *imageName;
 @property (nullable, nonatomic, retain) NSString *cathegoryDescription;
 @property (nullable, nonatomic, retain) NSString *cathegoryName;
 @property (nullable, nonatomic, retain) NSNumber *id;

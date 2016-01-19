@@ -13,6 +13,7 @@
 
 @implementation Cathegory (CoreDataProperties)
 
+@dynamic imageName;
 @dynamic cathegoryDescription;
 @dynamic cathegoryName;
 @dynamic id;

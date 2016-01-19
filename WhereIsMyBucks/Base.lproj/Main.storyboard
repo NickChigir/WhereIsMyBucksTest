@@ -452,7 +452,7 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CathegoryCell" rowHeight="57" id="P6O-Bd-nh0">
                                 <rect key="frame" x="0.0" y="92" width="600" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" tableViewCell="P6O-Bd-nh0" id="sY9-Vd-Sg7">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P6O-Bd-nh0" id="sY9-Vd-Sg7">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>

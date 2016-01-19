@@ -2,6 +2,65 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>default category list</key>
+	<array>
+		<dict>
+			<key>description</key>
+			<string>meal to eat</string>
+			<key>name</key>
+			<string>Food</string>
+			<key>image</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>toys for kids</string>
+			<key>name</key>
+			<string>toys</string>
+			<key>image</key>
+			<string>13</string>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>public transport</string>
+			<key>name</key>
+			<string>transport</string>
+			<key>image</key>
+			<string>27</string>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>communal taxes</string>
+			<key>name</key>
+			<string>housekeeping</string>
+			<key>image</key>
+			<string>6</string>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>to wear on</string>
+			<key>name</key>
+			<string>clothes</string>
+			<key>image</key>
+			<string>11</string>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>all type of activity</string>
+			<key>name</key>
+			<string>sport</string>
+			<key>image</key>
+			<string>21</string>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>for birthday, holidays etc</string>
+			<key>name</key>
+			<string>gifts</string>
+			<key>image</key>
+			<string>19</string>
+		</dict>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

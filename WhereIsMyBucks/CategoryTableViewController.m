@@ -91,6 +91,11 @@
     // Do any additional setup after loading the view.
     self.managedObjectContext = [(AppDelegate *)[[UIApplication sharedApplication]delegate]  managedObjectContext];
     
+    NSInteger count =[Cathegory getItemsCountForContext : self.managedObjectContext];
+    if (count == 0) {
+        [Cathegory createDefaultCategoriesForContext:self.managedObjectContext];
+    }
+    
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Cathegory" inManagedObjectContext:self.managedObjectContext];
@@ -130,7 +135,7 @@
     
     // [self.fetchResult addObject:[self createDummyCathegory]];
     
-    
+    self.tableView.rowHeight = 50.0;
     //self.tableView.dataSource = self;
     //self.tableView.delegate =self;
     
@@ -195,10 +200,14 @@
         Cathegory *content = self.fetchResult[indexPath.row];
         UITextField *nameField = [cell viewWithTag:2];
         UITextField *descField = [cell viewWithTag:3];
+        UIButton *imageButton = [cell viewWithTag:1];
         nameField.text = content.cathegoryName;
         descField.text = content.cathegoryDescription;
         nameField.delegate = self;
         descField.delegate = self;
+      //  imageButton.imageView.image = [UIImage imageNamed:content.imageName];
+        [imageButton setImage:[UIImage imageNamed:content.imageName] forState:UIControlStateNormal];
+        
     }
     
 }

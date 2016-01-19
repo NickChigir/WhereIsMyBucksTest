@@ -25,6 +25,7 @@
         <attribute name="cathegoryDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cathegoryName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="imageName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="toCashFlow" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="CashFlow" inverseName="linkToCathegory" inverseEntity="CashFlow" syncable="YES"/>
     </entity>
     <entity name="Event" representedClassName="Event">
@@ -44,7 +45,7 @@
         <element name="Account" positionX="153" positionY="45" width="128" height="105"/>
         <element name="Balance" positionX="331" positionY="45" width="128" height="105"/>
         <element name="CashFlow" positionX="-45" positionY="342" width="128" height="148"/>
-        <element name="Cathegory" positionX="268" positionY="369" width="128" height="103"/>
+        <element name="Cathegory" positionX="268" positionY="369" width="128" height="120"/>
         <element name="Event" positionX="-380" positionY="102" width="128" height="60"/>
         <element name="Transaction" positionX="124" positionY="171" width="128" height="103"/>
     </elements>
