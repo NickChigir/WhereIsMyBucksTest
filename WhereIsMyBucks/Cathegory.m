@@ -58,6 +58,48 @@
     
 }
 
+
++(NSArray<NSDictionary *> *) totalsByCategoryForContext:(NSManagedObjectContext *) context{
+    NSArray<NSDictionary *> *result;
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName: @"Cathegory"
+                                              inManagedObjectContext:context];
+    [request setEntity:entity];
+    
+    
+    [request setResultType:NSDictionaryResultType];
+    
+    NSExpression *keyPathGrouping = [NSExpression expressionForKeyPath:@"cathegoryName"];
+    NSExpression *keyPathSum = [NSExpression expressionForKeyPath:@"toCashFlow.amount"];
+    
+    // Create an expression to represent the function you want to apply
+    NSExpression *expression = [NSExpression expressionForFunction:@"sum:"
+                                                         arguments:@[keyPathSum]];
+    
+    
+    NSExpressionDescription *expressionDescGroupBy = [[NSExpressionDescription alloc] init];
+    [expressionDescGroupBy setName:@"categoryName"];
+    [expressionDescGroupBy setExpression:expression];
+    [expressionDescGroupBy setExpressionResultType:NSStringAttributeType];
+    
+    NSExpressionDescription *expressionDescription = [[NSExpressionDescription alloc] init];
+    [expressionDescription setName:@"TotalAmount"];
+    [expressionDescription setExpression:expression];
+    [expressionDescription setExpressionResultType:NSInteger32AttributeType];
+    [request setPropertiesToFetch:@[expressionDescription]];
+    
+    
+    //request.predicate = [NSPredicate predicateWithFormat:@"id == 2"];
+    
+    
+    //request.sortDescriptors = [NSArray array];
+    
+    NSError *error = nil;
+    NSArray *array = [context executeFetchRequest:request error:&error];
+    NSLog(@"result %@", array.description);
+    return result;
+}
+
 +(void) createDefaultCategoriesForContext:(NSManagedObjectContext *) context{
    // NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
   

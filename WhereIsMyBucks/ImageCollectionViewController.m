@@ -85,6 +85,7 @@ static NSString * const reuseIdentifier = @"Cell";
     UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
     UIImageView *imageView = [cell viewWithTag:1];
     imageView.backgroundColor = [UIColor blueColor];
+    
     self.selectedCategory.imageName = [NSString stringWithFormat:@"%i",indexPath.row+1];
     [self.selectedImage setImage:imageView.image forState:UIControlStateNormal];
      
