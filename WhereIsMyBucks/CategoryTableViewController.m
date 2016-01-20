@@ -11,6 +11,7 @@
 #import "Cathegory+CoreDataProperties.h"
 #import <CoreData/CoreData.h>
 #import "AppDelegate.h"
+#import "ImageCollectionViewController.h"
 
 #define DUMMY_NAME @""
 #define DUMMY_DESC @""
@@ -373,14 +374,32 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"selectImage"]) {
+        ImageCollectionViewController *destination = segue.destinationViewController;
+        
+        UITableViewCell *cell = (UITableViewCell *)[[sender superview] superview];
+        NSLog(@"cell %@",[[sender superview] superview].class);
+        
+        //UITableView *table = (UITableView *)[cell superview];
+        
+        
+        NSIndexPath *detailIndexPath = [self.tableView indexPathForCell:cell];
+       // destination.detailIndex = detailIndexPath.row;
+        
+        destination.selectedCategory =self.fetchResult[detailIndexPath.row];
+        destination.selectedImage = sender;
+        
+        
+    }
+    
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end
