@@ -65,7 +65,8 @@
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     CashFlow *content = self.detailItem.toCashFlow[indexPath.row];
     cell.textLabel.text = content.linkToCathegory.cathegoryName;
-    cell.detailTextLabel.text = [NSString  stringWithFormat:@"%.00f", content.amount.floatValue];
+    cell.detailTextLabel.text = [NSString  stringWithFormat:@"%@", content.amount.description];
+    cell.imageView.image = [UIImage imageNamed:content.linkToCathegory.imageName];
     return cell;
     
 }
