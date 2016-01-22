@@ -79,14 +79,14 @@
     
     NSExpressionDescription *expressionDescGroupBy = [[NSExpressionDescription alloc] init];
     [expressionDescGroupBy setName:@"categoryName"];
-    [expressionDescGroupBy setExpression:expression];
+    [expressionDescGroupBy setExpression:keyPathGrouping];
     [expressionDescGroupBy setExpressionResultType:NSStringAttributeType];
     
     NSExpressionDescription *expressionDescription = [[NSExpressionDescription alloc] init];
     [expressionDescription setName:@"TotalAmount"];
     [expressionDescription setExpression:expression];
     [expressionDescription setExpressionResultType:NSInteger32AttributeType];
-    [request setPropertiesToFetch:@[expressionDescription]];
+    [request setPropertiesToFetch:@[expressionDescGroupBy, expressionDescription]];
     
     
     //request.predicate = [NSPredicate predicateWithFormat:@"id == 2"];
@@ -95,8 +95,8 @@
     //request.sortDescriptors = [NSArray array];
     
     NSError *error = nil;
-    NSArray *array = [context executeFetchRequest:request error:&error];
-    NSLog(@"result %@", array.description);
+    result= [context executeFetchRequest:request error:&error];
+    NSLog(@"result %@", result.description);
     return result;
 }
 

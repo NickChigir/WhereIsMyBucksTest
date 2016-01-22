@@ -31,6 +31,9 @@
     
     //self.navigationItem.
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    NSArray<NSDictionary *> *test = [Cathegory totalsByCategoryForContext:self.managedObjectContext];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {

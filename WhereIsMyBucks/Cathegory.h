@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 // Insert code here to declare functionality of your managed object subclass
 +(NSInteger) getItemsCountForContext:(NSManagedObjectContext *) context;
 +(void) createDefaultCategoriesForContext:(NSManagedObjectContext *) context;
++(NSArray<NSDictionary *> *) totalsByCategoryForContext:(NSManagedObjectContext *) context;
     
 
 

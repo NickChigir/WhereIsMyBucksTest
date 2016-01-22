@@ -210,6 +210,13 @@
         [imageButton setImage:[UIImage imageNamed:content.imageName] forState:UIControlStateNormal];
         
     }
+  
+    
+    else {
+        //cell.imageView.image = [UIImage imageNamed:@"Plus"];
+        cell.editing = YES;
+        
+    }
     
 }
 
@@ -226,6 +233,8 @@
 }
 
 #pragma mark table delegate
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     /*  if(indexPath.row == (self.fetchResult.count - 1)){
      self.cathegoryName.text = @"";
@@ -243,7 +252,7 @@
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     if (indexPath.row == self.fetchResult.count){
-        return NO;
+        return YES;
     }else {
         Cathegory *cat = self.fetchResult[indexPath.row];
         
@@ -258,6 +267,16 @@
     }
 }
 
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == self.fetchResult.count) {
+        return UITableViewCellEditingStyleInsert;//    UITableViewCellEditingStyleNone,
+        // UITableViewCellEditingStyleDelete,
+        //  UITableViewCellEditingStyleInsert
+    } else {
+        return UITableViewCellEditingStyleDelete;
+        
+    }
+}
 - (void)tableView:(UITableView*)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath __TVOS_PROHIBITED{
     NSLog(@"Edit begin!");
     

@@ -496,7 +496,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i65-eE-Itd">
-                                            <rect key="frame" x="8" y="13" width="143" height="30"/>
+                                            <rect key="frame" x="14" y="8" width="143" height="30"/>
                                             <state key="normal" title="Add new category"/>
                                             <connections>
                                                 <action selector="addNew:" destination="taL-sf-Jj1" eventType="touchUpInside" id="RpL-32-eyK"/>
