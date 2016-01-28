@@ -15,6 +15,7 @@
 		3707AE6D1C4E919700C388E8 /* TransactionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3707AE6C1C4E919700C388E8 /* TransactionTableViewController.m */; };
 		3707AE721C4F097800C388E8 /* ImageCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3707AE711C4F097800C388E8 /* ImageCollectionViewController.m */; };
 		377E746E1C2965FB003C4C38 /* CathegoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 377E746D1C2965FB003C4C38 /* CathegoryViewController.m */; };
+		37893A231C5A44B800FF2150 /* IntelligentSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37893A221C5A44B800FF2150 /* IntelligentSplitViewController.m */; };
 		37AB93D91C03CEAF00BFB2E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AB93D81C03CEAF00BFB2E9 /* main.m */; };
 		37AB93DC1C03CEAF00BFB2E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AB93DB1C03CEAF00BFB2E9 /* AppDelegate.m */; };
 		37AB93DF1C03CEB000BFB2E9 /* WhereIsMyBucks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37AB93DD1C03CEB000BFB2E9 /* WhereIsMyBucks.xcdatamodeld */; };
@@ -70,6 +71,8 @@
 		3707AE711C4F097800C388E8 /* ImageCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewController.m; sourceTree = "<group>"; };
 		377E746C1C2965FB003C4C38 /* CathegoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CathegoryViewController.h; sourceTree = "<group>"; };
 		377E746D1C2965FB003C4C38 /* CathegoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CathegoryViewController.m; sourceTree = "<group>"; };
+		37893A211C5A44B800FF2150 /* IntelligentSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelligentSplitViewController.h; sourceTree = "<group>"; };
+		37893A221C5A44B800FF2150 /* IntelligentSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntelligentSplitViewController.m; sourceTree = "<group>"; };
 		37AB93D41C03CEAF00BFB2E9 /* WhereIsMyBucks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereIsMyBucks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37AB93D81C03CEAF00BFB2E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37AB93DA1C03CEAF00BFB2E9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 		3707AE571C4902D800C388E8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				37893A211C5A44B800FF2150 /* IntelligentSplitViewController.h */,
+				37893A221C5A44B800FF2150 /* IntelligentSplitViewController.m */,
 				37AB93E01C03CEB000BFB2E9 /* MasterViewController.h */,
 				37AB93E11C03CEB000BFB2E9 /* MasterViewController.m */,
 				37AB93E31C03CEB000BFB2E9 /* DetailViewController.h */,
@@ -381,6 +386,7 @@
 				37AB93D91C03CEAF00BFB2E9 /* main.m in Sources */,
 				37AE15E81C08796E0039F04E /* CashFlow+CoreDataProperties.m in Sources */,
 				37AE15EF1C08BB9F0039F04E /* KeysGenerator.m in Sources */,
+				37893A231C5A44B800FF2150 /* IntelligentSplitViewController.m in Sources */,
 				37AE15E71C08796E0039F04E /* Balance.m in Sources */,
 				37AE15DE1C08796E0039F04E /* Transaction+CoreDataProperties.m in Sources */,
 				3707AE5B1C49AF1E00C388E8 /* TransactionViewController.m in Sources */,
@@ -520,6 +526,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nick.WhereIsMyBucks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -531,6 +538,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nick.WhereIsMyBucks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

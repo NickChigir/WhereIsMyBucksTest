@@ -10,6 +10,7 @@
 #import "DetailViewController.h"
 #import "Transaction.h"
 #import "Cathegory.h"
+#import "AppDelegate.h"
 
 @interface MasterViewController ()
 
@@ -21,13 +22,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    self.managedObjectContext = [(AppDelegate *)[[UIApplication sharedApplication]delegate]  managedObjectContext];
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     
     UIBarButtonItem *manageButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(manageCathegories:)];
     self.navigationItem.rightBarButtonItems = @[addButton,manageButton];
     
-    
+    self.splitViewController.delegate =self;
     
     //self.navigationItem.
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
@@ -89,8 +91,8 @@
         Transaction *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
         [controller setDetailItem:object];
-        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-        controller.navigationItem.leftItemsSupplementBackButton = YES;
+        //controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+        //controller.navigationItem.leftItemsSupplementBackButton = YES;
     }
 }
 
@@ -242,5 +244,15 @@
     [self.tableView reloadData];
 }
  */
+#pragma mark - Split view
+
+- (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
+    if ([secondaryViewController isKindOfClass:[UINavigationController class]] && [[(UINavigationController *)secondaryViewController topViewController] isKindOfClass:[DetailViewController class]] && ([(DetailViewController *)[(UINavigationController *)secondaryViewController topViewController] detailItem] == nil)) {
+        // Return YES to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
+        return YES;
+    } else {
+        return NO;
+    }
+}
 
 @end
