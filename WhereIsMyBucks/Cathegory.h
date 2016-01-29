@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#define CATEGORY_NAME @"categoryName"
+#define TOTAL_AMOUNT @"totalAmount"
 
 NS_ASSUME_NONNULL_BEGIN
 

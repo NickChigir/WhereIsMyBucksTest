@@ -115,7 +115,7 @@
         <!--Statistic-->
         <scene sceneID="H6p-0A-mLu">
             <objects>
-                <viewController id="lD2-c4-i39" sceneMemberID="viewController">
+                <viewController id="lD2-c4-i39" customClass="ChartsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7UA-Kf-DuQ"/>
                         <viewControllerLayoutGuide type="bottom" id="G0L-hu-TQ8"/>
@@ -124,16 +124,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Charts will be here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pf6-bW-1Jh">
-                                <rect key="frame" x="19" y="28" width="143" height="21"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1lT-IT-LoV" customClass="GKBarGraph">
+                                <rect key="frame" x="20" y="57" width="360" height="199"/>
+                                <color key="backgroundColor" red="0.61790082840886951" green="0.82197516025641015" blue="0.70077455454831039" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="A8V-ex-DF4"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Totals by Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pf6-bW-1Jh">
+                                <rect key="frame" x="20" y="28" width="144" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pf6-bW-1Jh" firstAttribute="leading" secondItem="Miq-Z2-Nqa" secondAttribute="leadingMargin" id="9oB-eg-4Ex"/>
+                            <constraint firstItem="1lT-IT-LoV" firstAttribute="leading" secondItem="Miq-Z2-Nqa" secondAttribute="leadingMargin" id="Aox-wp-PlV"/>
+                            <constraint firstItem="1lT-IT-LoV" firstAttribute="trailing" secondItem="Miq-Z2-Nqa" secondAttribute="trailingMargin" id="FBr-EV-lVX"/>
+                            <constraint firstItem="1lT-IT-LoV" firstAttribute="top" secondItem="pf6-bW-1Jh" secondAttribute="bottom" constant="8" id="kqe-5L-aCs"/>
+                            <constraint firstItem="pf6-bW-1Jh" firstAttribute="top" secondItem="7UA-Kf-DuQ" secondAttribute="bottom" constant="8" id="rk8-38-NI8"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Statistic" image="Chart" selectedImage="Chart" id="XaK-nf-TRk"/>
+                    <connections>
+                        <outlet property="graphView" destination="1lT-IT-LoV" id="YS3-FZ-V3f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQ7-so-aPO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -502,7 +519,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" tag="1" contentMode="scaleToFill" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUA-pI-nYQ">
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUA-pI-nYQ">
                                             <rect key="frame" x="6" y="3" width="50" height="50"/>
                                             <state key="normal" image="1"/>
                                             <connections>

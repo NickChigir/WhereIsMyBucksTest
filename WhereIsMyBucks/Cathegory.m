@@ -78,12 +78,12 @@
     
     
     NSExpressionDescription *expressionDescGroupBy = [[NSExpressionDescription alloc] init];
-    [expressionDescGroupBy setName:@"categoryName"];
+    [expressionDescGroupBy setName:CATEGORY_NAME];
     [expressionDescGroupBy setExpression:keyPathGrouping];
     [expressionDescGroupBy setExpressionResultType:NSStringAttributeType];
     
     NSExpressionDescription *expressionDescription = [[NSExpressionDescription alloc] init];
-    [expressionDescription setName:@"TotalAmount"];
+    [expressionDescription setName:TOTAL_AMOUNT];
     [expressionDescription setExpression:expression];
     [expressionDescription setExpressionResultType:NSInteger32AttributeType];
     [request setPropertiesToFetch:@[expressionDescGroupBy, expressionDescription]];
