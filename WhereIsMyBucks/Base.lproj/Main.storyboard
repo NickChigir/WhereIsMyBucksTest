@@ -124,9 +124,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1lT-IT-LoV" customClass="GKBarGraph">
-                                <rect key="frame" x="20" y="57" width="360" height="199"/>
-                                <color key="backgroundColor" red="0.61790082840886951" green="0.82197516025641015" blue="0.70077455454831039" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1lT-IT-LoV" customClass="GKBarGraph">
+                                <rect key="frame" x="20" y="57" width="560" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="A8V-ex-DF4"/>
                                 </constraints>

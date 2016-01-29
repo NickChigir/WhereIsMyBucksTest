@@ -25,11 +25,11 @@
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     // Do any additional setup after loading the view.
-    [self populateData];
+  
     self.graphView.dataSource = self;
     self.graphView.marginBar=10;
     self.graphView.barWidth =30;
-    [self.graphView draw];
+    
     
 }
 
@@ -39,8 +39,13 @@
 }
 #pragma mark - Model Data source
 - (void) populateData{
+    self.grandTotal = nil;
     NSManagedObjectContext *context =[(AppDelegate *)[[UIApplication sharedApplication]delegate]  managedObjectContext];
+    
+    [context refreshAllObjects];
     self.categoryData = [Cathegory totalsByCategoryForContext:context];
+    
+    
     
 }
 -(NSNumber *) grandTotal {
@@ -93,7 +98,18 @@
      return [[self.categoryData objectAtIndex:index] valueForKey:CATEGORY_NAME];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+      [self populateData];
+}
 
+- (void)viewDidLayoutSubviews{
+    //update bar width
+    NSInteger numberOfBars = self.categoryData.count;
+    CGFloat barWidth = self.view.bounds.size.width/ numberOfBars;
+    self.graphView.barWidth =barWidth*0.7;
+    self.graphView.marginBar =barWidth*0.2;
+    [self.graphView draw];
+}
 /*
 #pragma mark - Navigation
 
